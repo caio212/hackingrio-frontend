@@ -1,0 +1,38 @@
+
+
+
+
+<div class="register-wrapper-degrade"></div>
+
+<div class="register-wrapper-bubble">
+  <div class="register-bubble"></div>
+</div>
+
+<div class="register-wrapper-men"></div>
+
+<div class="register-wrapper-title-and-form">
+  <div class="register-title">
+    Seja<br />
+    <span>bem<br />vindo!</span>
+    <div class="register-subtitle">Desbloqueie seu celular<br />e proteja seu chip</div>
+  </div>
+  <div class="register-form-wrapper">
+      <form [formGroup]="registerForm">
+        <div class="register-input-container">
+          <label>CPF</label>
+          <input type="number" class="register-input" name="first-name"  formControlName="cpf">
+        </div>
+
+        <div class="register-input-container">
+            <label>SENHA</label>
+            <input type="password" class="register-input" name="first-name" formControlName="password">
+        </div>
+      </form>
+
+      <div class="register-button" (click)="register(registerForm.value)"></div>
+  </div>
+</div>
+
+<div>
+  phone: {{ registerForm.value | json }}
+</div>
