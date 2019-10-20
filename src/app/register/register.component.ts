@@ -38,7 +38,10 @@ export class RegisterComponent implements OnInit {
   register(userData: UserData) {
     const params = this.getParams();
     this.http.post(`${ environment.API }/auth`, userData).subscribe(
-      res => console.log(params.registered ? 'Verificação bem sucedida' : 'Cadastro bem sucedido.'),
+      res => {
+        console.log(params.registered ? 'Verificação bem sucedida' : 'Cadastro bem sucedido.')
+        window.location.href = params.target;
+      },
       err => console.error(err)
     );
   }
@@ -48,7 +51,7 @@ export class RegisterComponent implements OnInit {
     window.location.href
       .split('?')[1]
       .split('&')
-      .map(str => str.split('=').map(str => str.replace(/%3D/g, '=')))
+      .map(str => str.split('=').map(str => str.replace(/%3D/g, '=').replace(/%2F/g, '/')))
       .forEach(pair => params[pair[0]] = pair[1] === 'true' ? true : (pair[1] === 'false' ? false : pair[1]));
     this.registered = params.registered;
     return params;
