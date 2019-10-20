@@ -36,7 +36,7 @@
   /* position: fixed; */
   /* right: 0; */
   font-family: sans-serif;
-  color: orange;
+  color: #fe000d;
   font-weight: bold;
   font-size: 311%;
   padding: 22px;
@@ -64,16 +64,61 @@
   position: fixed;
 }
 
-.register-form-wrapper {
-  background: #3b6c91;
-  width: 70vw;
-  height: 70vw;
+.register-form-wrapper-border {
+  position: relative;
+  width: 77vw;
+  height: 77vw;
   margin: 0 auto;
-  border-radius: 42vw;
-  border: 25px solid #41759c;
+  border-radius: 44vw;
   margin-right: 15px;
   margin-top: 289px;
   box-shadow: 3px 0px 15px 0px #3e5465;
+  background-image: linear-gradient(-109deg, #407197, #334f68);
+}
+
+.register-form-wrapper {
+  background: #3b6c91;
+  width: 62vw;
+  height: 62vw;
+  border-radius: 31vw;
+  position: absolute;
+  top: 27px;
+  left: 29px;
+}
+
+.register-button-wrapper {
+  width: 25vw;
+  height: 25vw;
+  border-radius: 13vw;
+  position: absolute;
+  bottom: -15px;
+  right: 26px;
+  background-image: linear-gradient(-45deg, #3b6c9159, #00000008);
+  border: 1px solid #0606061a;
+}
+
+.register-button {
+  width: 72%;
+  height: 72%;
+  background: #3b6c91;
+  border-radius: 52%;
+  cursor: pointer;
+  top: 13px;
+  position: absolute;
+  right: 12px;
+  border: 1px solid #0000000f;
+}
+
+.register-tim-logo {
+  background: url(/assets/images/logo.png);
+  width: 102px;
+  height: 30px;
+  background-size: contain;
+  position: fixed;
+  z-index: 2;
+  background-repeat: no-repeat;
+  bottom: 15px;
+  right: 38px;
 }
 
 .register-input {
@@ -91,8 +136,48 @@
 }
 
 .register-input-container label {
-  color: white;
+  color: #294f69;
   font-family: sans-serif;
+}
+
+.lgpd-wrapper {
+  width: calc(100% - 145px);
+  height: 40px;
+  position: fixed;
+  bottom: 29px;
+  display: grid;
+  grid-template-columns: 40px auto;
+  /* gap: 10px; */
+  left: 8px;
+  align-items: center;
+}
+
+.lgpd-circle-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-image: linear-gradient(-109deg, #407197, #334f68);
+  position: relative;
+}
+
+.lgpd-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-image: linear-gradient(-109deg, #cec0a3, #b6ad9b);
+}
+
+.lgpd-title {
+  color: white;
+  font-weight: bold;
+  /* font-size: smaller; */
+  align-self: center;
+  text-decoration: underline;
+  font-family: sans-serif;
+  font-size: 9px;
 }
 
 form {
@@ -100,18 +185,6 @@ form {
   width: 71%;
   margin: 0 auto;
   margin-top: 63px;
-}
-
-.register-button {
-  width: 60px;
-  height: 60px;
-  border: 8px solid #7a9ab1;
-  background: #536f85;
-  border-radius: 40px;
-  margin-top: 44px;
-  float: right;
-  opacity: 0.5;
-  cursor: pointer;
 }
 
 /* background: #30658a;
