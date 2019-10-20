@@ -1,4 +1,9 @@
 
+<div *ngIf="showModal" class="lgpd-modal-wrapper">
+  <div class="lgpd-modal-close" (click)="setShowModal(false)">X</div>
+  <div class="lgpd-modal-content" [innerHTML]="lgpdText"></div>
+</div>
+
 <div class="register-tim-logo"></div>
 
 <div class="register-wrapper-degrade"></div>
@@ -45,5 +50,5 @@
   <div class="lgpd-circle-wrapper">
     <div class="lgpd-circle"></div>
   </div>
-  <div class="lgpd-title">Aceito os termos de uso LGPD.</div>
+  <div class="lgpd-title" (click)="setShowModal(true)">Aceito os termos de uso LGPD.</div>
 </div>
