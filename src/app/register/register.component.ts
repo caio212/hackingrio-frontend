@@ -39,8 +39,9 @@ export class RegisterComponent implements OnInit {
   }
 
   getNumberParam() {
-    // Passar apenas um parâmetro
-    return window.location.href.split('?')[1].replace('number=', '');
+    const encoded = window.location.href.split('?')[1].replace('phone=', '');
+    const decoded = encoded.replace('%3D', '=');
+    return decoded;
   }
 
   private setPhoneNumber() {

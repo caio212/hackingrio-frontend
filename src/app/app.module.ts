@@ -8,7 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
-  { path: 'autenticacao/:id', component: RegisterComponent }
+  { path: 'autenticacao', component: RegisterComponent }
 ];
 
 @NgModule({
