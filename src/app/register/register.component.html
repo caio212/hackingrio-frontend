@@ -1,6 +1,5 @@
 
-
-
+<div class="register-tim-logo"></div>
 
 <div class="register-wrapper-degrade"></div>
 
@@ -16,23 +15,52 @@
     <span>bem<br />vindo!</span>
     <div class="register-subtitle">Desbloqueie seu celular<br />e proteja seu chip</div>
   </div>
-  <div class="register-form-wrapper">
-      <form [formGroup]="registerForm">
-        <div class="register-input-container">
-          <label>CPF</label>
-          <input type="number" class="register-input" name="first-name"  formControlName="cpf">
-        </div>
 
-        <div class="register-input-container">
-            <label>SENHA</label>
-            <input type="password" class="register-input" name="first-name" formControlName="password">
-        </div>
-      </form>
+  <div class="register-form-wrapper-border">
+    <div class="register-form-wrapper">
+        <!-- <form [formGroup]="registerForm">
+          <div class="register-input-container">
+            <label>CPF</label>
+            <input type="number" class="register-input" name="first-name"  formControlName="cpf">
+          </div>
+  
+          <div class="register-input-container">
+              <label>SENHA</label>
+              <input type="password" class="register-input" name="first-name" formControlName="password">
+          </div>
+        </form> -->
+    </div>
 
-      <div class="register-button" (click)="register(registerForm.value)"></div>
+    <div class="register-button-wrapper" (click)="register(registerForm.value)">
+      <div class="register-button"></div>
+    </div>
   </div>
 </div>
 
 <div>
   phone: {{ registerForm.value | json }}
 </div>
+
+<div class="lgpd-wrapper">
+  <div class="lgpd-circle-wrapper">
+    <div class="lgpd-circle"></div>
+  </div>
+  <div class="lgpd-title">Aceito os termos de uso LGPD.</div>
+</div>
+
+
+<!-- <div class="register-form-wrapper">
+  <form [formGroup]="registerForm">
+    <div class="register-input-container">
+      <label>CPF</label>
+      <input type="number" class="register-input" name="first-name"  formControlName="cpf">
+    </div>
+
+    <div class="register-input-container">
+        <label>SENHA</label>
+        <input type="password" class="register-input" name="first-name" formControlName="password">
+    </div>
+  </form>
+
+  <div class="register-button" (click)="register(registerForm.value)"></div>
+</div> -->
