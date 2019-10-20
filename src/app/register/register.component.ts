@@ -48,7 +48,7 @@ export class RegisterComponent implements OnInit {
       .split('&')
       .map(str => str.split('=').map(str => str.replace(/%3D/g, '=')))
       .forEach(pair => params[pair[0]] = pair[1] === 'true' ? true : (pair[1] === 'false' ? false : pair[1]));
-    this.register = params.registered;
+    this.registered = params.registered;
     return params;
   }
 
