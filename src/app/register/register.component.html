@@ -19,7 +19,7 @@
   <div class="register-form-wrapper-border">
     <div class="register-form-wrapper">
         <form [formGroup]="registerForm">
-          <div class="register-input-container">
+          <div class="register-input-container" [hidden]="registered">
             <label>CPF</label>
             <input type="number" class="register-input" name="first-name"  formControlName="cpf">
           </div>

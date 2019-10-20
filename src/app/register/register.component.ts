@@ -20,7 +20,11 @@ export class RegisterComponent implements OnInit {
     phone: new FormControl(''),
     password: new FormControl(''),
     cpf: new FormControl(''),
+    imei: new FormControl(''),
+    iccid: new FormControl('')
   });
+
+  registered: boolean;
 
   constructor(
     private registerService: RegisterService,
@@ -32,21 +36,30 @@ export class RegisterComponent implements OnInit {
   }
 
   register(userData: UserData) {
+    const params = this.getParams();
     this.http.post(`${ environment.API }/auth`, userData).subscribe(
-      res => console.log('Cadastrado bem sucedido.'),
+      res => console.log(params.registered ? 'Verificação bem sucedida' : 'Cadastro bem sucedido.'),
       err => console.error(err)
     );
   }
 
-  getNumberParam() {
-    const encoded = window.location.href.split('?')[1].replace('phone=', '');
-    const decoded = encoded.replace('%3D', '=');
-    return decoded;
+  getParams() {
+    const params = {} as any;
+    window.location.href
+      .split('?')[1]
+      .split('&')
+      .map(str => str.split('=').map(str => str.replace(/%3D/g, '=')))
+      .forEach(pair => params[pair[0]] = pair[1] === 'true' ? true : (pair[1] === 'false' ? false : pair[1]));
+    this.registered = params.registered;
+    return params;
   }
 
   private setPhoneNumber() {
+    const params = this.getParams();
     this.registerForm.patchValue({
-      phone: atob(this.getNumberParam())
+      phone: atob(params.phone),
+      imei: params.imei,
+      iccid: params.iccid
     });
   }
 
