@@ -109,6 +109,14 @@
   border: 1px solid #0000000f;
 }
 
+.register-button-icon {
+  font-size: 46px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #385c7a;
+}
+
 .register-tim-logo {
   background: url(/assets/images/logo.png);
   width: 102px;
@@ -150,6 +158,13 @@
   /* gap: 10px; */
   left: 8px;
   align-items: center;
+}
+
+.lgpd-circle-check {
+  color: #216f24;
+  text-align: center;
+  margin-top: 2px;
+  visibility: hidden;
 }
 
 .lgpd-circle-wrapper {

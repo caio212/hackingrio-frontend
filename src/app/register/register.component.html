@@ -37,7 +37,11 @@
     </div>
 
     <div class="register-button-wrapper" (click)="register(registerForm.value)">
-      <div class="register-button"></div>
+      <div class="register-button">
+        <div class="register-button-icon">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -47,8 +51,12 @@
 </div>
 
 <div class="lgpd-wrapper">
-  <div class="lgpd-circle-wrapper">
-    <div class="lgpd-circle"></div>
+  <div class="lgpd-circle-wrapper" (click)="setCheck()">
+    <div class="lgpd-circle">
+      <div class="lgpd-circle-check" #check>
+        <i class="fas fa-check"></i>
+      </div>
+    </div>
   </div>
-  <div class="lgpd-title" (click)="setShowModal(true)">Aceito os termos de uso LGPD.</div>
+  <div #lgpd class="lgpd-title" (click)="setShowModal(true)">Aceito os termos de uso LGPD.</div>
 </div>

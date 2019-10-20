@@ -25,7 +25,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/fontawesome/fontawesome.js"
+            ]
           },
           "configurations": {
             "production": {
