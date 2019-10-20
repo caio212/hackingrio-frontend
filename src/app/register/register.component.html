@@ -18,7 +18,7 @@
 
   <div class="register-form-wrapper-border">
     <div class="register-form-wrapper">
-        <!-- <form [formGroup]="registerForm">
+        <form [formGroup]="registerForm">
           <div class="register-input-container">
             <label>CPF</label>
             <input type="number" class="register-input" name="first-name"  formControlName="cpf">
@@ -28,7 +28,7 @@
               <label>SENHA</label>
               <input type="password" class="register-input" name="first-name" formControlName="password">
           </div>
-        </form> -->
+        </form>
     </div>
 
     <div class="register-button-wrapper" (click)="register(registerForm.value)">
@@ -47,20 +47,3 @@
   </div>
   <div class="lgpd-title">Aceito os termos de uso LGPD.</div>
 </div>
-
-
-<!-- <div class="register-form-wrapper">
-  <form [formGroup]="registerForm">
-    <div class="register-input-container">
-      <label>CPF</label>
-      <input type="number" class="register-input" name="first-name"  formControlName="cpf">
-    </div>
-
-    <div class="register-input-container">
-        <label>SENHA</label>
-        <input type="password" class="register-input" name="first-name" formControlName="password">
-    </div>
-  </form>
-
-  <div class="register-button" (click)="register(registerForm.value)"></div>
-</div> -->
