@@ -231,6 +231,17 @@ form {
   visibility: hidden;
 }
 
+.audio-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: -13px;
+  text-align: center;
+  font-size: 40px;
+  color: #314e67;
+}
+
 /* background: #30658a;
 width: 60vw;
 height: 60vw;
