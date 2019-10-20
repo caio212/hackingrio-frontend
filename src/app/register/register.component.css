@@ -227,6 +227,10 @@ form {
   margin-top: 63px;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 /* background: #30658a;
 width: 60vw;
 height: 60vw;
