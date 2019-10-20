@@ -20,7 +20,8 @@ export class RegisterComponent implements OnInit {
     phone: new FormControl(''),
     password: new FormControl(''),
     cpf: new FormControl(''),
-    imei: new FormControl('')
+    imei: new FormControl(''),
+    iccid: new FormControl('')
   });
 
   registered: boolean;
@@ -57,7 +58,8 @@ export class RegisterComponent implements OnInit {
     const params = this.getParams();
     this.registerForm.patchValue({
       phone: atob(params.phone),
-      imei: params.imei
+      imei: params.imei,
+      iccid: params.iccid
     });
   }
 
