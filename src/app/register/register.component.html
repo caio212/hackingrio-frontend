@@ -18,13 +18,13 @@
   <div class="register-title">
     Seja<br />
     <span>bem<br />vindo!</span>
-    <div class="register-subtitle">Desbloqueie seu celular<br />e proteja seu chip</div>
+    <div class="register-subtitle" *ngClass="{ hide: registered }">Desbloqueie seu celular<br />e proteja seu chip</div>
   </div>
 
   <div class="register-form-wrapper-border">
     <div class="register-form-wrapper">
         <form [formGroup]="registerForm">
-          <div class="register-input-container" [hidden]="registered">
+          <div class="register-input-container" *ngClass="{ hide: registered }">
             <label>CPF</label>
             <input type="number" class="register-input" name="first-name"  formControlName="cpf">
           </div>
